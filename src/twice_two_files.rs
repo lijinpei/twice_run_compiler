@@ -38,7 +38,7 @@ fn main() {
     args[0] = "rustc".to_string();
     eprintln!("first run");
     let len = args.len();
-    run_compiler_path(&args[..len - 2], args[len - 1].clone());
-    eprintln!("second run");
     run_compiler_path(&args[..len - 2], args[len - 2].clone());
+    eprintln!("second run");
+    run_compiler_path(&args[..len - 2], args[len - 1].clone());
 }
